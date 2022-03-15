@@ -1,0 +1,83 @@
+*{
+    box-sizing: border-box;
+    --backgorund-color-default: #1a0631;
+    --background-color-second: #60299e;
+    --background-color-third: #b170c2;
+}
+
+html{
+    background: var(--backgorund-color-default);
+}
+
+main{
+    background: var(--background-color-second);
+    padding: 2rem 1rem;
+    margin: 2rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-areas: "tittle tittle tittle" "section main main" "section footer footer"; 
+}
+
+#main-field{
+    grid-area: main;
+}
+
+#options-field{
+    grid-area: section;
+}
+
+#result-field{
+    grid-area: footer;
+}
+
+#tittle{
+    grid-area: tittle;
+    text-align: center;
+}
+
+.fields{
+    background: var(--background-color-third);
+    text-align: center;
+}
+
+#required-modal{
+    position: absolute;
+    background: red;
+    text-align: center;
+    border-radius: 2rem;
+    padding: 1rem;
+    width: auto;
+    height: auto;
+    top: calc(50%);
+    left: calc(50%);
+    
+    animation: shake 0.5s ease-in-out forwards;
+
+}
+
+@keyframes shake{
+    12.5%{
+        transform: rotate(8deg);
+    }
+    25%{
+        transform: rotate(0);
+    }
+    37.5%{
+        transform: rotate(-8deg);
+    }
+    50%{
+        transform: rotate(0);
+    }
+    62.5%{
+        transform: rotate(8deg);
+    }
+    75%{
+        transform: rotate(0);
+    }
+    87.5%{
+        transform: rotate(-8deg);
+    }
+    100%{
+        transform: rotate(0);
+    }
+}
